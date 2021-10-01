@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imersão Dev Alura - Aula 01</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">    
+</head>
+<body>
+    <header class="container col-md-12">
+        <h1 class="page-title">
+			Calculadora de média</h1>
+		<p class="page-subtitle">
+			Descubra qual a sua média de nota de todas as provas!
+		</p>
+		<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+    </header>
+    <main class="container">
+        <section class="row" id="conteudo">            
+            <div class="col">
+                <ul>
+                    <li onclick="SelectForm('calcMedia')">Calculadora de média</li>
+                    <li onclick="SelectForm('calcConvert')">Calculadora de conversão</li>                  
+                </ul>
+                <div class="infors">
+                    <h1 class="page-title">Instrução</h1>
+                    <p>
+                        A conversão consiste em: <br>
+                        REAL para DOLAR <br>
+                        CELCIUS para FAHRENHEIT <br>
+                        MILHAS para KM <br>
+                    </p>
+                </div>
+            </div>
+            <form method="POST" class="col" name="FormularioMedia" action="#" id="fnota" oninput="calcMedia()">
+                <fieldset id="imputNotas">
+                    <legend class="page-title">Notas do Usuário</legend>
+                    <p><label for="cprimeiro">Primeiro: </label><input type="number" name="tPrimeiro" id="cprimeiro" size="2" placeholder="Digite uma nota..."></p>
+                    <p><label for="csegundo">Segundo: </label><input type="number" name="tSegundo" id="csegundo" size="2" placeholder="Digite uma nota..."></p>
+                    <p><label for="cterceiro">Terceiro: </label><input type="number" name="tTerceiro" id="cterceiro" size="2" placeholder="Digite uma nota..."></p>
+                    <p><label for="cquarto">Quarto: </label><input type="number" name="tQuarto" id="cquarto" size="2" placeholder="Digite uma nota..."></p>
+                </fieldset>
+                <button type="reset" onclick="reset()"> RESET </button>
+                <fieldset id="media">
+                    <legend class="page-title">Resultado da Média</legend>
+                    <p><label for="cresult">Resultado: </label><input type="text" name="tResultado" id="cresult" disabled placeholder="Aguarde..."></p>                
+                </fieldset> 
+            </form>
+
+            <form method="POST" class="col" name="FormularioConversao" action="#" id="fconvert" oninput="calcMedia()">
+                <fieldset id="imputValores">
+                    <legend class="page-title">Valor a ser convertido</legend>
+                    <p><label for="cvalor">Valor: </label><input type="number" name="tValor" id="cvalor" size="2" placeholder="Digite um valor..."></p>
+                </fieldset>
+                <legend>Click na conversão que deseja</legend>
+                <button type="button" onclick="Convert('dolar')"> DOLAR </button>
+                <button type="button" onclick="Convert('fahrenhreit')"> FAHRENHREIT </button>
+                <button type="button" onclick="Convert('km')"> KM </button>
+                <fieldset id="media">
+                    <legend class="page-title">Resultado da Conversão</legend>
+                    <p><label for="cresult">Resultado: </label><input type="text" name="tResultado" id="cresult" disabled placeholder="Aguarde..."></p>
+                    <button type="reset" onclick=""> RESET </button>         
+                </fieldset> 
+            </form>
+        </section>
+    </main>
+	<a href="https://alura.com.br/" target="_blank">
+		<img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+	</a>
+	<footer>
+        <p> Desenvolvido por <b>Dênerson Pinas</b></p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

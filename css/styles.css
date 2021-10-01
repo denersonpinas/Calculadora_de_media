@@ -1,0 +1,183 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* END - RESET */
+
+/* VARIAVEIS */
+:root {
+    --color-bg: #212429;
+    --color-primary: #f9da06; 
+    --color-secundary: #c4cfde;
+}
+
+/* PADRÃO */
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    background-color: var(--color-bg);
+}
+
+header, main {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.page-title {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 21pt;
+}
+
+.page-subtitle {
+    color: var(--color-secundary);
+    font-weight: 500;
+    font-size: 17pt;
+}
+
+header img {
+    max-width: 200px;
+}
+
+main ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+main ul li {
+    margin: 10px 0px 10px 0px;
+    padding: 20px;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15pt;
+}
+
+main ul li:hover {
+    border-left: 4px solid #fff;
+}
+
+main .infors {
+    padding-top: 10px;
+    background-color: var(--color-secundary);
+    box-shadow: 0 0 .5em var(--color-primary);
+}
+
+main .infors p {
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+main #fnota {
+    display: block;
+}
+
+main #fconvert {
+    display: none;
+}
+
+main form {
+    padding: 20px;
+    background-color: var(--color-secundary);
+    box-shadow: 0 0 .5em var(--color-primary);
+    text-align: left;
+}
+
+main form label {
+    color: #000;
+    font-weight: 500;
+    font-size: 14pt;
+}
+
+main form legend {
+ text-align: center;   
+}
+
+main form input {
+    width: 100%;
+    height: 25px;
+    margin: 2px 0px 10px 0px;
+    padding: 5px;
+}
+
+main form button {
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    border-radius: 25px;
+    border-bottom: 6px solid #fff3a2;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15pt;
+    transition: all 1s;
+}
+
+main form button:hover {
+    transform: scale(1.03);
+}
+
+.alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    flex-shrink: 1;
+    text-align: center;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* RESPONSIVIDADE
+/* Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 540px
+ */
+@media screen and (max-width: 540px) {
+    main ul li {
+        padding: 10px;
+        font-size: 12pt;
+    }    
+}
+
+/* Código abaixo é responsavel por toda responsividade do site em 
+ * dispositivos menores de 375px
+ */
+ @media screen and (max-width: 400px) {
+    
+}
